@@ -1,0 +1,77 @@
+<div class="gradient-border" id="box">
+    <div class="gradient-inner"></div>
+  </div>
+  
+  <style type="text/css">    
+  
+  :root {
+    --borderWidth: 4px;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  #box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 768px;
+    height: 1024px;
+    color: white;
+    font-size: 2.5rem;
+  }
+  
+  .gradient-border {
+  
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  
+  .gradient-border:before, .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animateBorder 24s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  .gradient-border:after {
+    filter: blur(25px);
+  }
+  
+  .gradient-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 64px;
+    height: 64px;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+  }
+  
+  @keyframes animateBorder {
+      0%, 100% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+  }
+  
+  </style>
