@@ -1,9 +1,8 @@
 <div class="gradient-border" id="box">
-    <div class="gradient-inner"></div>
-  </div>
+  <div class="gradient-inner"></div>
+</div>
   
-  <style type="text/css">    
-  
+<style type="text/css">    
   :root {
     --borderWidth: 4px;
   }
@@ -43,7 +42,7 @@
     left: calc(-1 * var(--borderWidth));
     height: calc(100% + var(--borderWidth) * 2);
     width: calc(100% + var(--borderWidth) * 2);
-    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    background: linear-gradient(60deg, #fffa00, #aaff00);
     border-radius: calc(2 * var(--borderWidth));
     z-index: -1;
     animation: animateBorder 24s ease alternate infinite;
@@ -51,7 +50,7 @@
   }
   
   .gradient-border:after {
-    filter: blur(25px);
+    filter: blur(10px);
   }
   
   .gradient-inner {
@@ -73,5 +72,4 @@
           background-position: 100% 50%;
       }
   }
-  
-  </style>
+</style>
